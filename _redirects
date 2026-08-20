@@ -1,0 +1,57 @@
+# Canonical host
+http://windermereconcrete.com/* https://windermereconcrete.com/:splat 301!
+http://www.windermereconcrete.com/* https://windermereconcrete.com/:splat 301!
+https://www.windermereconcrete.com/* https://windermereconcrete.com/:splat 301!
+
+# Path conventions
+/services/* /:splat 301
+/service-areas/* /:splat 301
+/areas/* /:splat 301
+/insights/* /blog/:splat 301
+
+# Service slug variants
+/driveways/* /concrete-driveways/:splat 301
+/concrete-driveway/* /concrete-driveways/:splat 301
+/patios/* /concrete-patios/:splat 301
+/concrete-patio/* /concrete-patios/:splat 301
+/pool-decks/* /concrete-pool-decks/:splat 301
+/pool-deck-resurfacing/* /concrete-pool-decks/:splat 301
+/stamped/* /stamped-concrete/:splat 301
+/decorative-concrete/* /stamped-concrete/:splat 301
+/slabs/* /concrete-slabs/:splat 301
+/concrete-pads/* /concrete-slabs/:splat 301
+/concrete-repair/* /concrete-repair-resurfacing/:splat 301
+/concrete-resurfacing/* /concrete-repair-resurfacing/:splat 301
+/sidewalks/* /sidewalks-walkways/:splat 301
+/walkways/* /sidewalks-walkways/:splat 301
+/curbing/* /sidewalks-walkways/:splat 301
+/paver-driveway/* /paver-driveways/:splat 301
+/pavers/* /paver-patios/:splat 301
+/paver-patio/* /paver-patios/:splat 301
+/fire-pits/* /paver-patios/:splat 301
+/travertine/* /travertine-pool-decks/:splat 301
+/pool-deck-pavers/* /travertine-pool-decks/:splat 301
+/marble-pavers/* /travertine-pool-decks/:splat 301
+/paver-sealing/* /paver-sealing-repair/:splat 301
+/paver-cleaning/* /paver-sealing-repair/:splat 301
+/paver-repair/* /paver-sealing-repair/:splat 301
+/pressure-washing/* /paver-sealing-repair/:splat 301
+/driveway-widening/* /driveway-extensions/:splat 301
+/parking-pads/* /driveway-extensions/:splat 301
+
+# City slug variants
+/drphillips/* /dr-phillips/:splat 301
+/doctor-phillips/* /dr-phillips/:splat 301
+/horizonwest/* /horizon-west/:splat 301
+/wintergarden/* /winter-garden/:splat 301
+/winterpark/* /winter-park/:splat 301
+/belleisle/* /belle-isle/:splat 301
+/lakenona/* /lake-nona/:splat 301
+/stcloud/* /st-cloud/:splat 301
+/saint-cloud/* /st-cloud/:splat 301
+/championsgate/* /champions-gate/:splat 301
+/lakemary/* /lake-mary/:splat 301
+/altamonte/* /altamonte-springs/:splat 301
+
+# 404 fallback
+/* /404.html 404

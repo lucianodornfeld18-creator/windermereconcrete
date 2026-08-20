@@ -1,0 +1,9 @@
+{
+  "name": "windermereconcrete",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node prepare-deploy.mjs",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=windermereconcrete"
+  }
+}
