@@ -79,6 +79,6 @@ Build: 2026-07-02 · 269 HTML pages · 267 sitemap URLs · verified programmatic
 **SCORE: 47 PASS / 0 FAIL / 3 PENDING-ON-OWNER (IndexNow key, GA4 ID, GBP map embed — all in WHAT-I-NEED-FROM-YOU.md)**
 
 ## Residual notes for the re-audit of this audit
-- Placeholders present in built HTML (intentional, launch-blocking): {{PHONE}}/{{PHONE_E164}} (3,257 occurrences), {{EMAIL}} (742), {{FORM_ENDPOINT}} (1), {{FINANCING_DETAILS}} (1). Supply → edit `_data.py`/`_build_pages.py` → `py build_all.py`.
+- Contact placeholders are resolved: the built site uses (689) 407-6658, hello@windermereconcrete.com, and `/api/contact`. The remaining built-content placeholder is {{FINANCING_DETAILS}} (1 occurrence).
 - Images: 16 files needed per images/IMAGE-MANIFEST.md; no `<img>` tags ship broken (design is CSS-first), only OG/schema URLs await the files.
 - Cost-guide length (~1,300 words) is intentional: table-dense, answer-first AEO format; expand top performers after Search Console data arrives.

@@ -11,7 +11,8 @@ const rootAssets = [
   "sitemap.xml",
   "llms.txt",
   "_headers",
-  "_redirects"
+  "_redirects",
+  "_routes.json"
 ];
 
 const excludedDirectories = new Set([
@@ -19,8 +20,10 @@ const excludedDirectories = new Set([
   ".wrangler",
   "__pycache__",
   "dist",
+  "functions",
   "node_modules",
-  "preview-homes"
+  "preview-homes",
+  "workers"
 ]);
 
 rmSync(output, { recursive: true, force: true });

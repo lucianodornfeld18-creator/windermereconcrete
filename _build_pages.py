@@ -118,8 +118,9 @@ def build_contact():
       <div class="formcard" id="proposal">
         <h2 style="margin-bottom:.4rem">Request your written proposal</h2>
         <p style="font-size:.86rem;color:var(--ink-soft);margin-bottom:1.2rem">Free · no pressure · reply the same day</p>
-        <form method="POST" action="{{{{FORM_ENDPOINT}}}}">
+        <form method="POST" action="/api/contact">
           <div class="fgrid">
+            <label aria-hidden="true" style="position:absolute;left:-10000px">Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
             <label>Name<input type="text" name="name" required autocomplete="name"></label>
             <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
             <label class="full">Email<input type="email" name="email" required autocomplete="email"></label>

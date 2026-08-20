@@ -2,8 +2,10 @@
   "name": "windermereconcrete",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "node prepare-deploy.mjs",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=windermereconcrete"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=windermereconcrete",
+    "deploy:email-worker": "wrangler deploy --config workers/contact-email/wrangler.jsonc"
   }
 }

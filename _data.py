@@ -31,11 +31,12 @@ BUSINESS = {
     "name": "Windermere Concrete",
     "legal_name": "Windermere Concrete LLC",
     "domain": "windermereconcrete.com",
-    # ---- PLACEHOLDERS (owner-supplied — see WHAT-I-NEED-FROM-YOU.md) ----
-    "phone": "{{PHONE_E164}}",            # e.g. +1407XXXXXXX
-    "phone_display": "{{PHONE}}",         # e.g. (407) XXX-XXXX
-    "phone_tel": "{{PHONE_E164}}",
-    "email": "{{EMAIL}}",
+    # ---- Owner-supplied contact details ----
+    "phone": "+16894076658",
+    "phone_display": "(689) 407-6658",
+    "phone_tel": "+16894076658",
+    "email": "hello@windermereconcrete.com",
+    # ---- Remaining placeholders (see WHAT-I-NEED-FROM-YOU.md) ----
     "year_founded": "{{YEAR}}",
     "rating": "{{RATING}}",
     "review_count": "{{REVIEW_COUNT}}",
@@ -82,8 +83,8 @@ BUSINESS = {
     "has_reviews": False,
 }
 
-# Contact links (placeholders resolve when the owner supplies the number)
-WA_LINK = "https://wa.me/{{PHONE_DIGITS}}?text=Hello%20Windermere%20Concrete%20%E2%80%94%20I%27d%20like%20a%20written%20proposal."
+# Contact links
+WA_LINK = "https://wa.me/16894076658?text=Hello%20Windermere%20Concrete%20%E2%80%94%20I%27d%20like%20a%20written%20proposal."
 SMS_LINK = f"sms:{BUSINESS['phone']}?body=Hello%20Windermere%20Concrete%20%E2%80%94%20I%27d%20like%20a%20written%20proposal."
 TEL_LINK = f"tel:{BUSINESS['phone']}"
 
