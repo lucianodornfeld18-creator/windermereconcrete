@@ -364,7 +364,7 @@ def build_index():
         links = " · ".join(
             f'<a href="/blog/{svc_slug}-cost-in-{c}-fl-2026/">{CITIES[c]["name"]}</a>' for c in TIER1)
         cost_secs += f'''<div style="padding:14px 0;border-bottom:1px dashed var(--hairline)">
-      <strong style="font-family:var(--disp);color:var(--lake)">{svc["short"]} cost guides:</strong>
+      <strong style="font-family:var(--disp);color:#fff">{svc["short"]} cost guides:</strong>
       <span style="line-height:2"> {links}</span>
     </div>'''
     body = f'''<div class="page-hero">

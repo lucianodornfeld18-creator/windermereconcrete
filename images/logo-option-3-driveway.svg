@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Windermere Concrete logo option 3</title>
+  <desc id="desc">Two concrete planes form a refined driveway and a subtle W.</desc>
+  <path d="M4 55 22 9h9L17 55H4Z" fill="#151719"/>
+  <path d="m60 55-18-46h-9l14 46h13Z" fill="#151719"/>
+  <path d="m21 55 11-33 11 33h-8l-3-12-3 12h-8Z" fill="#B9914D"/>
+  <path d="M7 59h50" fill="none" stroke="#B9914D" stroke-width="3"/>
+</svg>

@@ -40,6 +40,8 @@ def build_home():
     ]
     badges = "".join(f"<span>{b}</span>" for b in
                      ["Fully Insured", "Free Estimates", "Written Warranty", "ARC / HOA Submittal Support"])
+    svc_opts = "".join(f'<option value="{SERVICES[s]["name"]}">{SERVICES[s]["name"]}</option>'
+                       for s in SERVICE_ORDER)
     hero = f'''<div class="hero">
   <div class="hero-in">
     <div>
@@ -54,15 +56,18 @@ def build_home():
     </div>
     <div class="quote-card" id="estimate">
       <h2>Get your written proposal</h2>
-      <p class="qc-sub">Free · line-itemized · delivered within one business day of the site walk</p>
-      <ul>
-        <li>Same-day reply to every inquiry</li>
-        <li>Published pricing &mdash; compare us line by line</li>
-        <li>ARC / HOA submittal package included</li>
-        <li>Base work photographed before it&rsquo;s covered</li>
-        <li>Signed workmanship warranty at handover</li>
-      </ul>
-      <a class="btn btn-pine" href="/contact/#proposal">Start My Proposal</a>
+      <p class="qc-sub">Free · line-itemized · tell us what you are planning</p>
+      <form class="hero-form" method="POST" action="/api/contact">
+        <label aria-hidden="true" class="hero-hp">Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+        <div class="hero-form-grid">
+          <label class="full">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="{BUSINESS["phone_display"]}"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@email.com"></label>
+          <label class="full">Service<select name="service"><option value="">Select a service</option>{svc_opts}<option>Something else / not sure</option></select></label>
+          <label class="full">Project details<textarea name="message" placeholder="Approximate size, current surface, timeline…"></textarea></label>
+          <button class="btn btn-pine full" type="submit">Request My Proposal</button>
+        </div>
+      </form>
       <p class="qc-alt">Prefer to talk? <a href="{TEL_LINK}">{BUSINESS["phone_display"]}</a></p>
     </div>
   </div>
@@ -130,7 +135,8 @@ def build_home():
 </section>
 {final_cta()}'''
     write_page("index.html",
-               head(title, desc, canonical, og_image=f"{SITE}{OG_DEFAULT}", json_ld=schemas),
+               head(title, desc, canonical, og_image=f"{SITE}{OG_DEFAULT}", json_ld=schemas,
+                    extra_meta='<link rel="preload" as="image" href="/images/concrete-crew-working-hero-v3.webp" fetchpriority="high">\n'),
                header(active="home"), body)
     print("[home] wrote index.html")
 
