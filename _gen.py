@@ -461,7 +461,7 @@ footer{background:var(--lake);color:rgba(255,255,255,.72);padding:64px 0 0;font-
 .masthead{background:rgba(255,255,255,.98);border-bottom:1px solid #ECE7DE;box-shadow:0 2px 12px rgba(16,18,22,.05);backdrop-filter:blur(10px)}
 .mast-in{padding-top:12px;padding-bottom:12px}
 .wordmark{display:flex;flex-direction:row;align-items:center;gap:11px;line-height:1;text-decoration:none}
-.wm-mark{width:42px;height:42px;flex:0 0 auto}
+.wm-mark{width:72px;height:40px;object-fit:contain;flex:0 0 auto}
 .wm-copy{display:flex;flex-direction:column}
 .wordmark .wm-name{font-size:1.05rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--lake)}
 .wordmark .wm-sub{font-size:.51rem;font-weight:800;letter-spacing:.23em;color:var(--brass);margin-top:6px}
@@ -565,7 +565,7 @@ section{padding:78px 0}
 .finale .fin-tel{font-family:var(--body);color:#D8BC86;font-size:clamp(1.5rem,3.5vw,2.2rem)}
 footer{background:#0C0E11;padding-top:64px}
 .foot-logo{display:flex;align-items:center;gap:12px;margin-bottom:17px}
-.foot-logo img{width:50px;height:50px}
+.foot-logo img{width:94px;height:52px;object-fit:contain}
 .foot-brand .fb-name{display:block;font-family:var(--body);font-size:1.02rem;letter-spacing:.05em;text-transform:uppercase;font-weight:800;color:#fff}
 .foot-brand .fb-sub{display:block;color:#D0AD6B;margin-top:5px}
 .foot-grid .ft-h{color:#D0AD6B}
@@ -581,7 +581,7 @@ footer{background:#0C0E11;padding-top:64px}
 }
 @media(max-width:760px){
   .mast-in{padding:9px 16px}
-  .wm-mark{width:38px;height:38px}
+  .wm-mark{width:61px;height:34px}
   .wordmark .wm-name{font-size:.92rem}
   .wordmark .wm-sub{font-size:.44rem}
   .navlist{background:#fff}
@@ -775,7 +775,7 @@ def header(active=""):
 <header class="masthead">
   <nav class="mast-in" aria-label="Main">
     <a class="wordmark" href="/" aria-label="{BUSINESS["name"]} — home">
-      <img class="wm-mark" src="/images/windermere-concrete-mark.png" alt="" width="44" height="44">
+      <img class="wm-mark" src="/images/windermere-concrete-wc-icon.png" alt="" width="72" height="40">
       <span class="wm-copy"><span class="wm-name">Windermere</span><span class="wm-sub">Concrete · Hardscape</span></span>
     </a>
     <ul class="navlist" id="navList">
@@ -825,7 +825,7 @@ def footer():
     return f'''<footer>
   <div class="foot-grid">
     <div class="foot-brand">
-      <a class="foot-logo" href="/" aria-label="{BUSINESS["name"]} — home"><img src="/images/windermere-concrete-mark.png" alt="" width="54" height="54"><span><span class="fb-name">Windermere</span><span class="fb-sub">Concrete · Hardscape</span></span></a>
+      <a class="foot-logo" href="/" aria-label="{BUSINESS["name"]} — home"><img src="/images/windermere-concrete-wc-icon.png" alt="" width="94" height="52"><span><span class="fb-name">Windermere</span><span class="fb-sub">Concrete · Hardscape</span></span></a>
       <p>{BUSINESS["tagline_long"]}</p>
       <p style="font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#f0d98c">{BUSINESS["checklist_name"]} · 48 Checkpoints · Fully Insured</p>
     </div>
@@ -1101,7 +1101,7 @@ def schema_organization():
         "name": BUSINESS["name"],
         "alternateName": BUSINESS["legal_name"],
         "url": SITE,
-        "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.png", "width": 64, "height": 64},
+        "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-wc-icon.png", "width": 64, "height": 64},
         "image": f"{SITE}{OG_DEFAULT}",
         "email": BUSINESS["email"],
         "address": {"@type": "PostalAddress", "addressLocality": BUSINESS["city"],
@@ -1180,7 +1180,7 @@ def schema_article(post, canonical, image=None):
             "datePublished": post["date_published"], "dateModified": post["date_modified"],
             "author": {"@type": "Organization", "name": BUSINESS["name"], "url": SITE},
             "publisher": {"@type": "Organization", "name": BUSINESS["name"],
-                          "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.png"}},
+                          "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-wc-icon.png"}},
             "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             "articleSection": post.get("category", "Concrete & Pavers")}
 
