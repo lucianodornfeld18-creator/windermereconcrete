@@ -745,7 +745,7 @@ def head(title, desc, canonical, og_image=None, og_type="website", indexable=Tru
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{og_image}">
-<link rel="icon" type="image/svg+xml" href="/images/windermere-concrete-mark.svg">
+<link rel="icon" type="image/png" href="/images/windermere-concrete-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -775,7 +775,7 @@ def header(active=""):
 <header class="masthead">
   <nav class="mast-in" aria-label="Main">
     <a class="wordmark" href="/" aria-label="{BUSINESS["name"]} — home">
-      <img class="wm-mark" src="/images/windermere-concrete-mark.svg" alt="" width="44" height="44">
+      <img class="wm-mark" src="/images/windermere-concrete-mark.png" alt="" width="44" height="44">
       <span class="wm-copy"><span class="wm-name">Windermere</span><span class="wm-sub">Concrete · Hardscape</span></span>
     </a>
     <ul class="navlist" id="navList">
@@ -825,7 +825,7 @@ def footer():
     return f'''<footer>
   <div class="foot-grid">
     <div class="foot-brand">
-      <a class="foot-logo" href="/" aria-label="{BUSINESS["name"]} — home"><img src="/images/windermere-concrete-mark.svg" alt="" width="54" height="54"><span><span class="fb-name">Windermere</span><span class="fb-sub">Concrete · Hardscape</span></span></a>
+      <a class="foot-logo" href="/" aria-label="{BUSINESS["name"]} — home"><img src="/images/windermere-concrete-mark.png" alt="" width="54" height="54"><span><span class="fb-name">Windermere</span><span class="fb-sub">Concrete · Hardscape</span></span></a>
       <p>{BUSINESS["tagline_long"]}</p>
       <p style="font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#f0d98c">{BUSINESS["checklist_name"]} · 48 Checkpoints · Fully Insured</p>
     </div>
@@ -1101,7 +1101,7 @@ def schema_organization():
         "name": BUSINESS["name"],
         "alternateName": BUSINESS["legal_name"],
         "url": SITE,
-        "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.svg", "width": 64, "height": 64},
+        "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.png", "width": 64, "height": 64},
         "image": f"{SITE}{OG_DEFAULT}",
         "email": BUSINESS["email"],
         "address": {"@type": "PostalAddress", "addressLocality": BUSINESS["city"],
@@ -1180,7 +1180,7 @@ def schema_article(post, canonical, image=None):
             "datePublished": post["date_published"], "dateModified": post["date_modified"],
             "author": {"@type": "Organization", "name": BUSINESS["name"], "url": SITE},
             "publisher": {"@type": "Organization", "name": BUSINESS["name"],
-                          "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.svg"}},
+                          "logo": {"@type": "ImageObject", "url": f"{SITE}/images/windermere-concrete-mark.png"}},
             "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             "articleSection": post.get("category", "Concrete & Pavers")}
 
